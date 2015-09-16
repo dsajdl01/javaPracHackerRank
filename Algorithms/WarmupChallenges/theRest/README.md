@@ -17,12 +17,14 @@ Draw a staircase of height N in the format given below.
  
 For example:  
   
-     #  
-    ##   
-   ###   
-  ####    
- #####   
-######   
+      #  
+     ##   
+    ###   
+   ####    
+  #####   
+ ######
+#######
+
 Staircase of height 6, note that last line has 0 spaces before it.  
  
 Sample Input 
@@ -30,12 +32,12 @@ Sample Input
 6  
 Sample Output  
   
-     #  
-    ##  
-   ###  
-  ####   
- #####   
-######   
+      #  
+     ##  
+    ###  
+   ####   
+  #####   
+ ######   
   
 result is SolutionStaircase.java  
   
@@ -141,4 +143,4 @@ Sample Input
 Sample Output  
 15511210043330985984000000  
   
-Result is SolutioFnactorials.java file  
+Result is SolutioFactorial.java file  
