@@ -26,17 +26,34 @@ public class SolutionMap {
        for(int j = 0; j < test.length; j++){
            printNamePhone(map, test[j]);
        }
+
+       try{
+            // input.txt file is: Test Case #4: input file.
+             File f = new File("inputMap.txt");
+             Scanner in = new Scanner(f);
+             HashMap<String, String> phonebook = new HashMap<String, String>();
+            
+             int test2 = in.nextInt();
+             in.nextLine();
+             for(int i = 0; i < test2; i++){
+                 phonebook.put(in.nextLine(), in.nextLine());           
+             }
+
+             // Read the queries until the end-of-file.
+             while(in.hasNext()){
+                 printNamePhone(phonebook, in.nextLine());
+             }
+          } catch (FileNotFoundException fnfe){
+                 System.out.println(fnfe.toString());
+        }
+
     }
     
     public static void  printNamePhone(HashMap<String, String> p,String n){
-        if(p.containsKey(n)){
-            for(Entry<String, String> e : p.entrySet()){
-				if(e.getKey().equals(n.trim())){
-                    System.out.println(n+"="+e.getValue());
-				}
-            }
+        if(p.containsKey(n)) { 
+               System.out.println(p.get(n));
         } else {
-          System.out.println("Not found");
+                System.out.println("Not found");
         }
     }
     
